@@ -2,7 +2,7 @@ import { DataTypes, Model, Sequelize } from 'sequelize'
 
 class Product extends Model {
   static init(sequelize) {
-    Model.init(
+    super.init(
       {
         name: DataTypes.STRING,
         price: DataTypes.INTEGER,
@@ -23,5 +23,4 @@ class Product extends Model {
     return Product
   }
 }
-
 export default Product
