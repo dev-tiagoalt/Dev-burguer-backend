@@ -45,7 +45,7 @@ class SessionController {
     }
 
     const token = jwt.sign({ id: existingUser.id }, process.env.JWT_SECRET, {
-      expiresIn: authConfig.expiresIn,
+      expiresIn: '7d',
     })
 
     return response.status(200).json({
